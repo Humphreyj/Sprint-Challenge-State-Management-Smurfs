@@ -29,6 +29,9 @@ export const smurfReducer = (state = initialState, action) => {
         return{...state,smurfs: [state.smurfs, action.payload]};
     case 'UPDATE_VILLAGE' : 
         return {...state,smurfs: [state.smurfs,action.payload]};
+    case 'REMOVE_SMURF' :
+        console.log(action.payload)
+        return {...state,smurfs: state.smurfs.filter(item => item.id !== action.payload)};
     
      default: 
         return state;

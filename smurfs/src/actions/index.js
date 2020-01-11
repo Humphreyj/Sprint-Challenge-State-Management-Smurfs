@@ -36,3 +36,8 @@ export const addSmurf = (newMember) => {
             
     }
 }
+
+export const removeSmurf = (smurfId) => {
+    console.log(smurfId)
+    return { type: 'REMOVE_SMURF', payload: smurfId};
+}
